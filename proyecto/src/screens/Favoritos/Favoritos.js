@@ -1,9 +1,9 @@
 import React from "react";
 
-function Populares() {
+function Favoritos() {
     return(
         <React.Fragment>
-            <p> Pagina de Ver Populares</p>
+            <p> Pagina de favoritos</p>
         </React.Fragment>
     );   
 }
@@ -12,4 +12,4 @@ function Populares() {
 
 
 
-export default Populares
+export default Favoritos
