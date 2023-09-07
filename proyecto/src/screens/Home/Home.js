@@ -1,5 +1,6 @@
 import React from "react";
-import navbar from "../../components/Navbar/navbar"
+import navbar from "../../components/Navbar/navbar";
+import Footer from '../../components/Footer/footer';
 
 function Home () {
     return (
