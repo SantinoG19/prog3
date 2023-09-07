@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './screens/Home/Home'
+
 
 import {Route,Switch} from 'react-router-dom'
 import DetallePeli from './screens/DetallePeli/DetallePeli';
@@ -8,6 +8,7 @@ import Loader from './screens/Loader/Loader';
 import Navbar from './components/Navbar/navbar';
 import Populares from './screens/Populares/Populares';
 import Favoritos from './screens/Favoritos/Favoritos';
+import Home from './screens/Home/Home';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route path="/Buscador" component={Loader}/>
         <Route path="" component={Navbar}/>
       </Switch>
-      <Footer />
+     
     </React.Fragment>
   );
 }
