@@ -2,14 +2,27 @@ import React from "react";
 import navbar from "../../components/Navbar/navbar";
 import Footer from '../../components/Footer/footer';
 
-function Home () {
-    return (
-        <React.Fragment>
-            <h1>Home</h1>
-            <p>Descripcion</p>
-            <h2> Mas populares</h2>
-            <h2>Tendencias</h2>
-        </React.Fragment>
-    )
+class Home extends Component {
+    constructor() {
+      super();
+      this.state = {
+        Populares: [],
+        Tendencia: [],
+    };
+  }
+
+
+componentDidMount(){
+
+    fetch("https://rickandmortyapi.com/api/character/2")
+
+    .then(response => response.json())
+    .then(data =>)
+    .catch(error => console.log(error))
 }
-export default Home;
+  
+    
+    }
+  
+  
+  export default Home

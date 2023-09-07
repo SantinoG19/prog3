@@ -1,15 +1,14 @@
 import React from 'react';
-
-
-import {Route,Switch} from 'react-router-dom'
+import Home from './screens/Home/Home';
 import DetallePeli from './screens/DetallePeli/DetallePeli';
 import DetalleSerie from './screens/DetalleSerie/DetalleSerie';
+import {Route,Switch} from 'react-router-dom'
 import Loader from './screens/Loader/Loader';
 import Navbar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
 import Populares from './screens/Populares/Populares';
 import Favoritos from './screens/Favoritos/Favoritos';
-import Home from './screens/Home/Home';
+
 
 function App() {
   return (
