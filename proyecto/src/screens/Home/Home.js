@@ -1,28 +1,36 @@
-import React from "react";
-import navbar from "../../components/Navbar/navbar";
-import Footer from '../../components/Footer/footer';
+import React, { Component } from "react";
 
 class Home extends Component {
-    constructor() {
-      super();
-      this.state = {
-        Populares: [],
-        Tendencia: [],
+  constructor() {
+    super();
+    this.state = {
+      personaje: {},
     };
   }
 
-
-componentDidMount(){
-
+  componentDidMount() {
     fetch("https://rickandmortyapi.com/api/character/2")
+      .then((response) => response.json())
+      .then((data) =>
+        this.setState({
+          personaje: data,
+        })
+      )
+      .catch((error) => console.log(error));
+  }
 
-    .then(response => response.json())
-    .then(data =>)
-    .catch(error => console.log(error))
+  render() {
+    console.log('me monte');
+    console.log(this.state);
+
+    return (
+      <section>
+        <p>
+          el nombre del personaje es: {this.state.personaje.name}
+        </p>
+      </section>
+    );
+  }
 }
-  
-    
-    }
-  
-  
-  export default Home
+
+export default Home;
