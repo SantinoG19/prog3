@@ -72,9 +72,13 @@ header .contenedor{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    
     background-color: #000404;
     height: 125px;
-    border: 1px solid #f5f2f2;
-    border-radius: 12px;
+   
 }
+.footer{
+    text-align: center;
+     color: rgb(255, 255, 255); font-family: 'Rajdhani', sans-serif; font-size: 10px; font-style: italic;
+     background-color: #000404;
+ }
