@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return(
+    
         <React.Fragment>
             <header className="header">
         <div className="contenedor">
@@ -16,18 +18,15 @@ function Navbar() {
                 </div>
               
             <nav>
-                <a  href="./index.html">HOME</a>
-                <a href="./favoritos.html">FAVORITOS</a>
-                <a href="./generos.html">VER TODAS</a>
+                <Link to='/'> HOME  </Link>
+        //      <Link to='/favoritos'> FAVORITOS </Link>
+        //      <Link to="/verTodos"> VER TODOS </Link> 
             </nav>
         </div>
     </header>
         </React.Fragment>
     );   
 }
-
-
-
 
 
 export default Navbar

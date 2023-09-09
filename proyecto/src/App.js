@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
 import Populares from './screens/Populares/Populares';
 import Favoritos from './screens/Favoritos/Favoritos';
+import VerTodas from './screens/VerTodas/VerTodas';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
         <Route path="/favoritos" component={Favoritos}/>
         <Route path="/DetallePeli/id/:id" exact={true} component={DetallePeli}/>
         <Route path="/DetalleSerie/id/:id" exact={true} component={DetalleSerie}/>
-        <Route path="/verTodos" component={Populares}/>
+        <Route path="/Populares" component={Populares}/>
+        <Route path="/verTodos" component={VerTodas}/>
         <Route path="/Buscador" component={Loader}/>
         <Route path="" component={Navbar}/>
         <Route path="" component={Footer}/>

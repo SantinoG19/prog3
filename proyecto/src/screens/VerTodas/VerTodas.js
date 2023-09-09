@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 
-class Favoritos extends Component {
+class VerTodas extends Component {
   constructor() {
     super();
     this.state = {
@@ -15,16 +15,16 @@ class Favoritos extends Component {
       <React.Fragment>
         
         <div>
-          <h1 style={{color: "black"}}>Pagina de favoritos</h1>
+          <h1 style={{color: "black"}}>PAGINA CON TODAS LAS PELICULAS</h1>
         </div>
       
       </React.Fragment>
     );
   }
-  
+  x;
 }
 
 
 
 
-export default Favoritos
+export default VerTodas
