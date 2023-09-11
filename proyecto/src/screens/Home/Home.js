@@ -35,8 +35,12 @@ class Home extends Component {
         <main>
     
           
-          <h1 class="maintitulos"> LAS SERIES MAS POPULARES </h1>
+          <h1 class="maintitulos"> LAS PELICULAS MAS POPULARES </h1>
         {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <h3>Cargando...</h3> }
+
+        <h1 class="maintitulos"> LAS PELICULAS EN TENDENCIA </h1>
+        {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <h3>Cargando...</h3> }
+    
     
         </main>
 
