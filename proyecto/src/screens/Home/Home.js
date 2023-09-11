@@ -1,5 +1,52 @@
 import React, { Component } from "react";
+import "./Home.css"
+import CardsContainer from "../../components/CardConteiner/CardComteiner"
 
+const endpointsPelis = ['top_rated'];
+class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      top_rated:[],
+
+    };
+  }
+
+  componentDidMount() {
+    endpointsPelis.map((endpoint, idx) => {
+      fetch(`https://api.themoviedb.org/3/movie/${endpoint}?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=1`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (endpoint=== 'top_rated' ) {
+          this.setState({
+            top_rated : data.results
+          })
+        } 
+      }
+      )
+      .catch((error) => console.log("El error es: " + error));
+    })
+    
+  }
+
+  render() {
+    return(
+
+        <main>
+    
+          
+          <h1 class="maintitulos"> LAS SERIES MAS POPULARES </h1>
+        {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <h3>Cargando...</h3> }
+    
+        </main>
+
+    ) 
+  }
+}
+
+export default Home;
+
+/** 
 class Home extends Component {
   constructor() {
     super();
@@ -48,3 +95,4 @@ class Home extends Component {
 
 
 export default Home;
+*/
