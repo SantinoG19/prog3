@@ -4,8 +4,8 @@ import DetallePeli from './screens/DetallePeli/DetallePeli';
 import DetalleSerie from './screens/DetalleSerie/DetalleSerie';
 import {Route,Switch} from 'react-router-dom'
 import Loader from './screens/Loader/Loader';
-import Navbar from './components/navbar/navbar';
-import Footer from './components/footer/footer';
+import Navbar from './components/Navbar/navbar';
+import Footer from './components/Footer/footer';
 import Populares from './screens/Populares/Populares';
 import Favoritos from './screens/Favoritos/Favoritos';
 import VerTodas from './screens/VerTodas/VerTodas';
