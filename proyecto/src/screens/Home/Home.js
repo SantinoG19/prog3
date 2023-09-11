@@ -3,34 +3,51 @@ import "./Home.css"
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
 
 const endpointsPelis = ['top_rated'];
+const endpointsSeries = ['popular']
 class Home extends Component {
   constructor() {
     super();
     this.state = {
       top_rated:[],
+      popular: []
 
     };
   }
-
+                      
   componentDidMount() {
-    endpointsPelis.map((endpoint, idx) => {
-      fetch(`https://api.themoviedb.org/3/movie/${endpoint}?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=1`)
+    endpointsPelis.map((endpoint, i) => {
+      fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=1`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
-        if (endpoint=== 'top_rated' ) {
+        {
           this.setState({
             top_rated : data.results,
-            titulo: data.original_title
-
+        
           })
         } 
       }
       )
       .catch((error) => console.log(error));
     })
-    
+    endpointsSeries.map((endpoint, i) => {
+      fetch(`https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        {
+          this.setState({
+            popular : data.results,
+        
+          })
+        } 
+      }
+      )
+      .catch((error) => console.log("El error es: " + error));
+    })
   }
+
+  
 
   render() {
     return(
@@ -39,10 +56,10 @@ class Home extends Component {
     
           
           <h1 class="maintitulos"> LAS PELICULAS MAS POPULARES </h1>
-        {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <h3>Cargando...</h3> }
+        {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <h3>...</h3> }
 
-        <h1 class="maintitulos"> LAS PELICULAS EN TENDENCIA </h1>
-        {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <h3>Cargando...</h3> }
+        <h1 class="maintitulos"> LAS SERIES MAS POPULARES</h1>
+        {this.state.top_rated.length > 0 ? <CardsContainer informacionSerie={this.state.popular}/> : <h3>...</h3> }
     
     
         </main>
