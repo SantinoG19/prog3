@@ -16,7 +16,8 @@ class Card extends Component {
                 
                
                 <img className='a ' src= {img + this.props.contentPeli.poster_path}  alt={this.props.contentPeli.title}/>
-              
+                
+                <button type='button' className='boton'>AGREGAR A FAVORITOS</button>
 
                 
               
