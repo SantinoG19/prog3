@@ -15,7 +15,7 @@ class Favoritos extends Component {
       <React.Fragment>
         
         <div>
-          <h1 style={{color: "black"}}>Pagina de favoritos</h1>
+          <h1 style={{color: "white"}}>Pagina de favoritos</h1>
         </div>
       
       </React.Fragment>

@@ -15,7 +15,7 @@ class VerTodas extends Component {
       <React.Fragment>
         
         <div>
-          <h1 style={{color: "black"}}>PAGINA CON TODAS LAS PELICULAS</h1>
+          <h1 style={{color: "white"}}>PAGINA CON TODAS LAS PELICULAS</h1>
         </div>
       
       </React.Fragment>
