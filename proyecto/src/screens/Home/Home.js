@@ -27,7 +27,7 @@ class Home extends Component {
         } 
       }
       )
-      .catch((error) => console.log("El error es: " + error));
+      .catch((error) => console.log(error));
     })
     
   }
