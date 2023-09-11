@@ -10,11 +10,11 @@ class CardsContainer extends Component {
     render(){
     
         return(
-            <section className='item-1'>
+            <section className='item-row'>
                 
                 {this.props.infoPeli ?
                 this.props.infoPeli.map((pelicula , i) =>{
-                    if (i < 6) {
+                    if (i < 5) {
                        return (<CardMovie key={pelicula.title + i} contentPeli={pelicula} />
                         )
                     }
@@ -24,7 +24,7 @@ class CardsContainer extends Component {
 
                {this.props.informacionSerie ?
                 this.props.informacionSerie.map((serie , i) =>{
-                    if (i < 6) {
+                    if (i < 5) {
                         return (<CardSerie  key={serie.name + i}  contenidoSerie={serie}/>
                         )
                      }    

@@ -77,12 +77,17 @@ header .contenedor{
 .a:hover{
     transform: scale(1.1);
 }
+.item-row{
+    display: flex;
+}
 .item-1{
-    display: flex; justify-content: space-between; 
+    display: flex; justify-content: space-between;
+    flex-direction: column; 
 }
 
 .margen{
     margin-left: 20px;
+
 }
 
 .titulo{
