@@ -17,9 +17,12 @@ class Home extends Component {
       fetch(`https://api.themoviedb.org/3/movie/${endpoint}?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=1`)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         if (endpoint=== 'top_rated' ) {
           this.setState({
-            top_rated : data.results
+            top_rated : data.results,
+            titulo: data.original_title
+
           })
         } 
       }
