@@ -11,11 +11,14 @@ class CardSerie extends Component {
       
         return (
             
-            <article className='item-1'>
+            <article className='item-1 titulo'>
              
                 
-               
+            
                 <img className='a ' src= {img + this.props.contenidoSerie.poster_path}  alt={this.props.contenidoSerie.name}/>
+                <h3 className='margen '>{this.props.contenidoSerie.name}  </h3>
+
+                <button type='button' className='boton'>AGREGAR A FAVORITOS</button>
               
 
                 

@@ -11,14 +11,15 @@ class Card extends Component {
       
         return (
             
-            <article className='item-1'>
+            <article className='item-1 titulo'>
              
                 
                
                 <img className='a ' src= {img + this.props.contentPeli.poster_path}  alt={this.props.contentPeli.title}/>
+                <h3 className='margen'>{this.props.contentPeli.title}  </h3>
                 
-                <h3 className=''>{this.props.contentPeli.title}</h3>
-              
+                <button type='button' className='boton'>AGREGAR A FAVORITOS</button>
+                
 
                 
               
