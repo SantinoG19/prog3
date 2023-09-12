@@ -31,6 +31,13 @@ class CardsContainer extends Component {
                 })
 
             : false } 
+
+              {this.props.verMasPelis ?
+                    this.props.verMasPelis.map((pelicula , idx) =>
+                        <CardMovie key={pelicula.title + idx}  contentPeli={pelicula}/>       
+                    )
+                    
+                : false } 
             
             </section>
             

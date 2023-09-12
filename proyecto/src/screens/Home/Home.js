@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Home.css"
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
+import { Link } from "react-router-dom";
 
 const endpointsPelis = ['top_rated'];
 const endpointsSeries = ['popular']
@@ -55,7 +56,7 @@ class Home extends Component {
         <main>
     
           
-          <h1 class="maintitulos"> LAS PELICULAS MAS POPULARES </h1> 
+          <h1 class="maintitulos"> LAS PELICULAS MAS POPULARES </h1>     <Link to={`/top_rated`}><p className="maintitulos"> <u>Ver todo</u></p></Link>
         {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <h3>...</h3> }
 
         <h1 class="maintitulos"> LAS SERIES MAS POPULARES</h1>
