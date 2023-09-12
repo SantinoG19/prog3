@@ -16,6 +16,8 @@ class Card extends Component {
                 
                
                 <img className='a ' src= {img + this.props.contentPeli.poster_path}  alt={this.props.contentPeli.title}/>
+                
+                <h3 className=''>{this.props.contentPeli.title}</h3>
               
 
                 
