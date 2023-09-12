@@ -9,6 +9,7 @@ import Footer from './components/Footer/footer';
 import Populares from './screens/Populares/Populares';
 import Favoritos from './screens/Favoritos/Favoritos';
 import VerTodas from './screens/VerTodas/VerTodas';
+import NoEncontrada from './screens/NoEncontrada/NoEncontrada';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/Buscador" component={Loader}/>
         <Route path="" component={Navbar}/>
         <Route path="" component={Footer}/>
+        <Route path="" component={NoEncontrada} />
       </Switch>
      <Footer/>
     </React.Fragment>
