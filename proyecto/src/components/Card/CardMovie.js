@@ -65,8 +65,9 @@ class Card extends Component {
             <article className='item-1 titulo'>
              
                 
-               
+                <Link to={`/DetallePeli/id/${this.props.contentPeli.id}`}>
                 <img className='a ' src= {img + this.props.contentPeli.poster_path}  alt={this.props.contentPeli.title}/>
+                </Link>
                 <h3 className='margen'>{this.props.contentPeli.title}  </h3>
                 
                 <button onClick={()=> this.modificarFav(this.props.contentPeli.id)} type='button'>{this.state.favTexto}</button>
