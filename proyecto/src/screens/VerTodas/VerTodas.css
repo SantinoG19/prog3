@@ -79,6 +79,7 @@ header .contenedor{
 }
 .item-row{
     display: flex; flex-wrap: wrap;
+    width: 100%;
 }
 .item-1{
     display: flex; justify-content: space-between;
