@@ -11,7 +11,7 @@ class CardSerie extends Component {
         }
     }; 
     componentDidMount(){
-        let confir= localStorage.getItem('favoritos')
+        let confir= localStorage.getItem('favoritosSerie')
 
         if (confir !== null){
             let favoritos= JSON.parse(confir)
@@ -28,7 +28,7 @@ class CardSerie extends Component {
     modificarFav(id){
 
         let favoritos = []
-        let confir= localStorage.getItem('favoritos')
+        let confir= localStorage.getItem('favoritosSerie')
         if (confir !== null){
             favoritos= JSON.parse(confir)
         }
@@ -51,7 +51,7 @@ class CardSerie extends Component {
 
 
         let favString = JSON.stringify(favoritos)
-        localStorage.setItem('favoritos', favString)
+        localStorage.setItem('favoritosSerie', favString)
 
         
     }
