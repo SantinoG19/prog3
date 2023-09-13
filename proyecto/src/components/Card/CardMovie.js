@@ -12,12 +12,13 @@ class Card extends Component {
     }; 
 
     componentDidMount(){
-        let confir1= localStorage.getItem('favoritos')
-        if (confir1 =! null){
-            let confir= JSON.parse(confir1)
+        let confir= localStorage.getItem('favoritos')
+
+        if (confir !== null){
+            let favoritos= JSON.parse(confir)
         
         
-            if(confir.includes(this.props.contentPeli.id)){
+            if(favoritos.includes(this.props.contentPeli.id)){
                 this.setState({
                     favTexto: 'Quitar de favoritos'
 
@@ -28,13 +29,32 @@ class Card extends Component {
     modificarFav(id){
 
         let favoritos = []
-        favoritos.push(id)
+        let confir= localStorage.getItem('favoritos')
+        if (confir !== null){
+            favoritos= JSON.parse(confir)
+        }
+        if(favoritos.includes(id)){
+            favoritos=favoritos.filter(unId=> unId!== id)
+            this.setState({
+                favTexto: 'Agregar a Favoritos'
+            })
+          
+            
+        }else{
+            favoritos.push(id)
+            this.setState({
+                favTexto: 'quitar de favoritos'
+            })
+
+        }
+
+        
+
+
         let favString = JSON.stringify(favoritos)
         localStorage.setItem('favoritos', favString)
 
-        this.setState({
-            favTexto: 'quitar de favoritos'
-        })
+        
     }
 
 
