@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import "./Favoritos.css"
+import CardsContainer from "../../components/CardConteiner/CardComteiner"
+
 
 
 class Favoritos extends Component {
@@ -38,13 +41,19 @@ fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=ba0b591fbb4dcbf21e7a
 
 
   render() {
-    console.log(this.state.favoritos);
+    console.log(this.state.pelis);
     return (
       <React.Fragment>
         
-        <div>
-          <h1 style={{color: "white"}}>Pagina de favoritos</h1>
-        </div>
+        <main>
+    
+          
+          <h1 class="maintitulos"> Peliculas Favoritas </h1>     
+          
+        <h1 class="maintitulos">SERIES FAVORITAS</h1>
+        
+    
+        </main>
       
       </React.Fragment>
     );
