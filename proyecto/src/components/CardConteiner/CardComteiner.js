@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CardMovie from '../Card/CardMovie';
 import CardSerie from '../Card/CardSerie';
+
 class CardsContainer extends Component {
     constructor(props) {
         super(props);

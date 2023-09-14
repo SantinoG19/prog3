@@ -1,0 +1,175 @@
+body{
+    background-color:black
+}
+.logo{
+    color: white; font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    font-size: 40px;
+    text-decoration: none;
+}
+.logo .box{
+        justify-content: center;
+        
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+header{
+    padding: 30px 0;
+}
+header nav a{
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #fff;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#search-text{
+    color: white;
+}
+
+.cont{
+    margin-left: 10px;
+}
+#search-button{
+    background-color: #aaa;
+    width: 60px;
+    height: 44px;
+    border-radius: 260px;
+}
+
+#search-form input{
+    color: white; width: 450px; height: 40px; background-color: #aaa; border-radius: 250px;
+}
+
+.clasificacion{
+ font-size: 25px;
+    color: white;
+    font-family: 'Rajdhani';
+    font-style: italic;
+}
+.genero{
+    text-decoration: none;
+    color: rgb(110, 101, 101);
+    margin-left: 40px;
+    font-weight:900;
+}
+.genero:hover{
+    color: #fff;
+    font-weight: 900;
+}
+
+
+.generos4 {
+    text-decoration: none;
+}
+.pelicula-principal{
+    width: 450px;
+    height: 450px;
+    margin-left: 450px;
+    border: white solid 5px;
+}
+
+.descrip{
+    font-size: 25px;
+    color: white;
+    font-family: 'Rajdhani';
+    font-style: italic;
+    }
+
+.tit{
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 35px;
+    font-style: italic;
+    text-transform: uppercase;
+    
+}
+
+.botonRecom {
+    background: none;
+    border: none;
+    color: rgb(110, 101, 101);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 35px;
+    font-style: italic;
+}
+.botonRecom:hover{
+    color: #fff;
+    font-weight: 900;
+}
+.fotoSerie{
+height: 280px;
+width: 230px;
+margin: 5px;
+border: solid 5px white;
+}
+
+.fotoSerie:hover{
+    transform: scale(1.1);
+}
+.tit1{
+    color: white;
+    font-family:fantasy, sans-serif;
+    font-size: 50px;
+    font-style: italic;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+
+.plataforma{
+height: 120px;
+width: 120px;
+}
+
+
+.item-1{
+    display: flex; 
+    
+    justify-content: space-between; 
+}
+
+    
+
+.footer{
+    text-align: center;
+     color: white; font-family: 'Rajdhani', sans-serif; font-size: 10px; font-style: italic;
+ }
+
+ @media (max-width: 1024px){
+    .item-1{
+        flex-wrap: wrap;
+    }
+ }
+
+ @media (max-width: 650px){
+    .item-1{
+        width: 70%;
+    }
+ }
+ .btnfav{
+    background: none;
+    border: none;
+    color: rgb(110, 101, 101);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 35px;
+    font-style: italic;
+ }

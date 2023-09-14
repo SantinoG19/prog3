@@ -20,7 +20,7 @@ function Navbar() {
             <nav>
                 <Link to='/'> HOME  </Link>
         //      <Link to='/favoritos'> FAVORITOS </Link>
-        //      <Link to="/verTodos"> VER TODOS </Link> 
+        //      
             </nav>
         </div>
     </header>

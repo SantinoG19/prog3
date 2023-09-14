@@ -17,6 +17,7 @@ class DetallePeli extends Component {
         .then((data) =>
         this.setState({
           detalle: data,
+          
         })
       )
       .catch((error) => console.log(error));
@@ -33,11 +34,13 @@ class DetallePeli extends Component {
         <h3 className="tit1">Titulo: {this.state.detalle.title}</h3>
           <img className="pelicula-principal" src={`https://image.tmdb.org/t/p/w500${detalle.poster_path}`} alt={this.state.detalle.original_title} />
           <article className="clasificacion">
-                <h1 className="tit">Sinopsis:</h1> {this.state.detalle.overview}
-                <h1 className="tit">Rating:</h1>{this.state.detalle.vote_average}
-                <h1 className="tit"></h1> Duracion:{this.state.detalle.runtime} minutos
-                <h1 className="tit">Fecha de Estreno:{this.state.detalle.release_date}
-                <h1 className="tit">Genero:</h1> {this.state.detalle.genre[0].name}</h1> 
+                <li className="tit">Sinopsis:</li> {this.state.detalle.overview}
+                <li className="tit">Rating:</li>{this.state.detalle.vote_average}
+                <li className="tit"> Duracion:</li>{this.state.detalle.runtime} minutos
+                <li className="tit">Fecha de Estreno:</li>{this.state.detalle.release_date}
+                <ul className="tit">Genero: {this.state.detalle.genre} 
+
+                </ul>
          </article>
          </div>
          <button className='btnfav'></button>
