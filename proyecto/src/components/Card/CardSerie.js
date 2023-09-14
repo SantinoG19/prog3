@@ -63,10 +63,14 @@ class CardSerie extends Component {
         return (
             
             <article className='item-1 titulo'>
+
+                <Link to={`/DetalleSerie/id/${this.props.contenidoSerie.id}`}>
+                <img className='a ' src= {img + this.props.contenidoSerie.backdrop_path}  alt={this.props.contenidoSerie.title}/>
+                </Link>
              
                 
             
-                <img className='a ' src= {img + this.props.contenidoSerie.poster_path}  alt={this.props.contenidoSerie.name}/>
+                <img className='a ' src= {img + this.props.contenidoSerie.backdrop_path}  alt={this.props.contenidoSerie.name}/>
                 <h3 className='margen '>{this.props.contenidoSerie.name}  </h3>
                 <button onClick={()=> this.modificarFav(this.props.contenidoSerie.id)} type='button'>{this.state.favTexto}</button>
 
