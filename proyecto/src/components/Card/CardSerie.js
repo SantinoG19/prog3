@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 
+import "../../screens/Home/Home.css"
+
 let img = 'https://image.tmdb.org/t/p/w500'
 
 class CardSerie extends Component {
