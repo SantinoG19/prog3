@@ -78,7 +78,8 @@ header .contenedor{
     transform: scale(1.1);
 }
 .item-row{
-    display: flex; flex-wrap: wrap;
+    display: flex; 
+    width: 100%
 
 }
 .item-1{
@@ -87,7 +88,7 @@ header .contenedor{
 }
 
 .margen{
-    margin-left: 20px;
+    margin-left: 20px; font-size: 15px; font-family: 'Quicksand', sans-serif ;
 
 }
 

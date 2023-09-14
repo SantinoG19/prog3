@@ -70,7 +70,7 @@ class Card extends Component {
                 </Link>
                 <h3 className='margen'>{this.props.contentPeli.title}  </h3>
                 
-                <button onClick={()=> this.modificarFav(this.props.contentPeli.id)} type='button'>{this.state.favTexto}</button>
+                <button className='boton' onClick={()=> this.modificarFav(this.props.contentPeli.id)} type='button'>{this.state.favTexto}</button>
                 
 
                 

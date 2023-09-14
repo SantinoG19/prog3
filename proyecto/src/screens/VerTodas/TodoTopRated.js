@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './VerTodas'
+import './VerTodas.css'
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
 
 class TodoTopRated extends Component {
