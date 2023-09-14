@@ -77,15 +77,13 @@ header .contenedor{
 .a:hover{
     transform: scale(1.1);
 }
-section .item-row{
-    display: flex;
-     flex-wrap: wrap;
+.item-row{
+    display: flex; flex-wrap: wrap;
 
-    width: 100%;
 }
 .item-1{
     display: flex; justify-content: space-between;
-    flex-direction: column; flex-wrap: wrap;
+    flex-direction: column; 
 }
 
 .margen{
@@ -168,4 +166,3 @@ display: inline-block;
   font-size: 16px;
   font-weight: bold;
 }
-

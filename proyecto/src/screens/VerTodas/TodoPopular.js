@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import './VerTodas.css'
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
 
-class TodoTopRated extends Component {
+class TodoPopular extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        top_rated:[],
+        popular:[],
         paginas: 2
       };
     }
@@ -17,20 +17,20 @@ componentDidMount() {
     .then((response) => response.json())
     .then((data) =>{
         this.setState({
-          top_rated : data.results
+            popular : data.results
         })
     })
     .catch((error) => console.log("El error es: " + error));
 }
 
-mostrarMasPeliculas() {
+mostrarMasSeries() {
     let paginasNumero = this.state.paginas;
 
-    fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=${paginasNumero}`)
+    fetch(`https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=${paginasNumero}`)
       .then((res) => res.json())
       .then((data) =>
         this.setState({
-          top_rated: data.results.concat(this.state.top_rated),
+          popular: data.results.concat(this.state.popular),
           page: paginasNumero + 1,
         })
       )
@@ -39,14 +39,14 @@ mostrarMasPeliculas() {
   
 
   render() {
-    console.log(this.state.top_rated);
+    console.log(this.state.popular);
     return(
       <React.Fragment>
-       <h1 class="maintitulos">VER TODAS LAS PELICULAS TOP RATED:</h1>
-        {this.state.top_rated.length > 0 ?
+       <h1 class="maintitulos">VER TODAS LAS SERIES POPUARES:</h1>
+        {this.state.popular.length > 0 ?
             <main>
-            <button onClick={() => this.mostrarMasPeliculas()}> Mas Peliculas </button>
-            <CardsContainer verMasPelis={this.state.top_rated} /> 
+            <button onClick={() => this.mostrarMasSeries()}> Mas Series </button>
+            <CardsContainer verMasSeries={this.state.popular} /> 
             </main>
         :
         <h3>Cargando ...</h3>}
@@ -57,4 +57,4 @@ mostrarMasPeliculas() {
   }
 }
 
-export default TodoTopRated;
+export default TodoPopular;

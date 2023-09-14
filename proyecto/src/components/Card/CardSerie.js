@@ -74,7 +74,7 @@ class CardSerie extends Component {
             
                 <img className='a ' src= {img + this.props.contenidoSerie.backdrop_path}  alt={this.props.contenidoSerie.name}/>
                 <h3 className='margen '>{this.props.contenidoSerie.name}  </h3>
-                <button onClick={()=> this.modificarFav(this.props.contenidoSerie.id)} type='button'>{this.state.favTexto}</button>
+                <button className='boton' onClick={()=> this.modificarFav(this.props.contenidoSerie.id)} type='button'>{this.state.favTexto}</button>
 
                 
               
