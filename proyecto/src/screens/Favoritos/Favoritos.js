@@ -45,7 +45,7 @@ fetch(urlM)
   if (traer !== null){
     favoritosSerie=JSON.parse(traer)
   }
-let url = 'https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1'
+let url = 'https://api.themoviedb.org/3/tv/top_rated?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=1'
 fetch(url)
 .then((response)=> response.json())
 .then((data)=>{
@@ -84,7 +84,7 @@ fetch(url)
           
         <h1 class="maintitulos">Series Favoritas</h1>
         <CardsContainer informacionSerie={this.state.series}/>
-        
+      
     
         </main>
       
