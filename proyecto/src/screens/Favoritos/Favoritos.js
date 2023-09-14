@@ -14,9 +14,11 @@ class Favoritos extends Component {
   }
   componentDidMount(){
     let Movie = []
+   
     let guardados = localStorage.getItem('favoritos');
+    
 
-    // Check if 'guardados' is not null and parse 'Movie'
+    
 let favoritos = [];
 if (guardados !== null) {
    favoritos = JSON.parse(guardados);
@@ -35,6 +37,18 @@ fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=ba0b591fbb4dcbf21e7a
 .catch((error) => console.log(error));
 
   }
+
+componentDidMount(){
+  let serie=[]
+
+  let traer = localStorage.getItem('favoritosSerie')
+  let favoritoSerie= [];
+
+  if (traer !== null){
+    favoritosSerie=JSON.parse(traer)
+  }
+fetch('https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1')
+}
 
   
       
