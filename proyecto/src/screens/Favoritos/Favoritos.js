@@ -13,7 +13,7 @@ class Favoritos extends Component {
     };
   }
   componentDidMount(){
-    let Movie = []
+    
    
     let guardados = localStorage.getItem('favoritos');
     
@@ -37,7 +37,7 @@ fetch(urlM)
 .catch((e) => console.log(e));
 
 
-let serie=[]
+
 
   let traer = localStorage.getItem('favoritosSerie')
   let favoritosSerie= [];
@@ -73,24 +73,27 @@ fetch(url)
     console.log(this.state.series)
     return (
 
-      <section className='item-row'>
-      {this.state.pelis.length <= 0 ? (
-        <p className="fabi">no tiene favs</p>
-      ) : (
-        <React.Fragment>
-          <main>
-            <h1 className="maintitulos">Peliculas Favoritas</h1>
-            <CardsContainer infoPeli={this.state.pelis} />
-            
-            <h1 className="maintitulos">Series Favoritas</h1>
-            <CardsContainer informacionSerie={this.state.series} />
-          </main>
-        </React.Fragment>
-      )}
-    </section>
-  );
+      
+      <React.Fragment>
+        
+        <main>
+    
+          
+          <h1 class="maintitulos"> Peliculas Favoritas </h1> 
+          <CardsContainer infoPeli={this.state.pelis} />    
+          
+        <h1 class="maintitulos">Series Favoritas</h1>
+        <CardsContainer informacionSerie={this.state.series}/>
+        
+    
+        </main>
+      
+      </React.Fragment>
+    );
+  }
+  
 }
-}
+
 
 
 
