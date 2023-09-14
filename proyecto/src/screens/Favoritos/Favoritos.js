@@ -34,21 +34,34 @@ fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=ba0b591fbb4dcbf21e7a
       pelis: pelis
    });
 })
-.catch((error) => console.log(error));
+.catch((e) => console.log(e));
 
-  }
 
-componentDidMount(){
-  let serie=[]
+let serie=[]
 
   let traer = localStorage.getItem('favoritosSerie')
-  let favoritoSerie= [];
+  let favoritosSerie= [];
 
   if (traer !== null){
     favoritosSerie=JSON.parse(traer)
   }
 fetch('https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1')
-}
+.then((response)=> response.json())
+.then((data)=>{
+  let series =data.results.filter((contenido)=>{
+    return favoritosSerie.includes(contenido.id);
+  });
+  this.setState({
+    series:series
+  });
+})
+.catch((e)=> console.log(e))
+
+  }
+
+
+  
+
 
   
       
@@ -56,6 +69,7 @@ fetch('https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83e
 
   render() {
     console.log(this.state.pelis);
+    console.log(this.state.series)
     return (
       <React.Fragment>
         
@@ -63,9 +77,10 @@ fetch('https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83e
     
           
           <h1 class="maintitulos"> Peliculas Favoritas </h1> 
-          <CardsContainer infoPeli={this.state.pelis}/>     
+          <CardsContainer infoPeli={this.state.pelis} />    
           
-        <h1 class="maintitulos">SERIES FAVORITAS</h1>
+        <h1 class="maintitulos">Series Favoritas</h1>
+        <CardsContainer informacionSerie={this.state.series}/>
         
     
         </main>
