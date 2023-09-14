@@ -33,7 +33,7 @@ class DetalleSerie extends Component {
         
         <div className="cont">
         <h3 className="tit1">Titulo: {this.state.detalleSerie.name}</h3>
-          <img className="pelicula-principal" src={`https://image.tmdb.org/t/p/w500${detalleSerie.backdrop_path}`} alt={this.state.detalleSerie.name} />
+          <img className="pelicula-principal" src={`https://image.tmdb.org/t/p/w500${detalleSerie.poster_path}`} alt={this.state.detalleSerie.name} />
           <article className="clasificacion">
                 <li className="tit">Sinopsis:</li> {this.state.detalleSerie.overview}
                 <li className="tit">Rating:</li>{this.state.detalleSerie.vote_average}
