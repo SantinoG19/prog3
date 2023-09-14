@@ -10,6 +10,7 @@ import Populares from './screens/Populares/Populares';
 import Favoritos from './screens/Favoritos/Favoritos';
 import NoEncontrada from './screens/NoEncontrada/NoEncontrada';
 import TodoTopRated from './screens/VerTodas/TodoTopRated';
+import TodoPopular from './screens/VerTodas/TodoPopular';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" exact={true} component={Home}/>
         <Route path="/favoritos" component={Favoritos}/>
         <Route path="/top_rated" component={TodoTopRated}/>
+        <Route path="/popular" component={TodoPopular}/>
         <Route path="/DetallePeli/id/:id" exact={true} component={DetallePeli}/>
         <Route path="/DetalleSerie/id/:id" exact={true} component={DetalleSerie}/>
         <Route path="/Populares" component={Populares}/>
