@@ -42,7 +42,7 @@ class CardsContainer extends Component {
 
                 {this.props.verMasSeries ?
                     this.props.verMasSeries.map((serie , i) =>
-                        <CardSerie key={serie.name + i}  ccontenidoSerie={serie}/>       
+                        <CardSerie key={serie.name + i}  contenidoSerie={serie}/>       
                     )
                     
                 : false } 

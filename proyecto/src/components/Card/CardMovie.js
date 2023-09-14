@@ -9,6 +9,7 @@ class Card extends Component {
         this.state = {
             favTexto:" Agregar a favoritos",
         }
+        
     }; 
 
     componentDidMount(){
@@ -25,7 +26,7 @@ class Card extends Component {
                 })
             }}
     }
-    
+
     modificarFav(id){
 
         let favoritos = []
@@ -58,6 +59,7 @@ class Card extends Component {
     }
 
 
+
     render(){
       
         return (
@@ -69,8 +71,9 @@ class Card extends Component {
                 <img className='a ' src= {img + this.props.contentPeli.poster_path}  alt={this.props.contentPeli.title}/>
                 </Link>
                 <h3 className='margen'>{this.props.contentPeli.title}  </h3>
-                
+              
                 <button className='boton' onClick={()=> this.modificarFav(this.props.contentPeli.id)} type='button'>{this.state.favTexto}</button>
+
                 
 
                 

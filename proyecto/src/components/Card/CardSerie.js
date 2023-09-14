@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 
-import "../../screens/Home/Home.css"
-
 let img = 'https://image.tmdb.org/t/p/w500'
 
 class CardSerie extends Component {
@@ -67,13 +65,13 @@ class CardSerie extends Component {
             <article className='item-1 titulo'>
 
                 <Link to={`/DetalleSerie/id/${this.props.contenidoSerie.id}`}>
-                <img className='a ' src= {img + this.props.contenidoSerie.backdrop_path}  alt={this.props.contenidoSerie.title}/>
+                <img className='a ' src= {img + this.props.contenidoSerie.poster_path}  alt={this.props.contenidoSerie.name}/>
                 </Link>
              
                 
-            
-                <img className='a ' src= {img + this.props.contenidoSerie.backdrop_path}  alt={this.props.contenidoSerie.name}/>
                 <h3 className='margen '>{this.props.contenidoSerie.name}  </h3>
+               
+            
                 <button className='boton' onClick={()=> this.modificarFav(this.props.contenidoSerie.id)} type='button'>{this.state.favTexto}</button>
 
                 

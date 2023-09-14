@@ -32,7 +32,7 @@ class Home extends Component {
       .catch((error) => console.log(error));
     })
     endpointsSeries.map((endpoint, i) => {
-      fetch(`https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`)
+      fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=1`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
@@ -59,7 +59,7 @@ class Home extends Component {
           <h1 class="maintitulos"> LAS PELICULAS MAS POPULARES </h1>     <Link to={`/top_rated`}><p className="maintitulos"> <u>Ver todo</u></p></Link>
         {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <h3>...</h3> }
 
-        <h1 class="maintitulos"> LAS SERIES MAS POPULARES</h1>
+        <h1 class="maintitulos"> LAS SERIES MAS POPULARES</h1>  <Link to={`/popular`}><p className="maintitulos"> <u>Ver todo</u></p></Link>
         {this.state.top_rated.length > 0 ? <CardsContainer informacionSerie={this.state.popular}/> : <h3>...</h3> }
     
     
