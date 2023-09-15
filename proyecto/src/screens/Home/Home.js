@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Home.css"
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
+import Filtro from "../../components/Filtro/Filtro";
 import { Link } from "react-router-dom";
 
 const endpointsPelis = ['top_rated'];
@@ -56,10 +57,12 @@ class Home extends Component {
         <main>
     
           
-          <h1 class="maintitulos"> LAS PELICULAS MAS POPULARES </h1>     <Link to={`/top_rated`} className="vertodo"><u>Ver todo</u></Link>
+          <h1 class="maintitulos"> LAS PELICULAS MAS POPULARES </h1>
+          <Filtro/>     <Link to={`/top_rated`} className="vertodo"><u>Ver todo</u></Link>
         {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <h3>...</h3> }
 
-        <h1 class="maintitulos"> LAS SERIES MAS POPULARES</h1>  <Link to={`/popular`}><p className="vertodoSerie"> <u>Ver todo</u></p></Link>
+        <h1 class="maintitulos"> LAS SERIES MAS POPULARES</h1> 
+        <Filtro/> <Link to={`/popular`}><p className="vertodoSerie"> <u>Ver todo</u></p></Link>
         {this.state.top_rated.length > 0 ? <CardsContainer informacionSerie={this.state.popular}/> : <h3>...</h3> }
         
     

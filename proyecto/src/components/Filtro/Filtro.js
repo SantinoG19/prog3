@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 class Filtro extends Component {
 
@@ -18,7 +19,7 @@ class Filtro extends Component {
     guardarDatosDelInput(eventoEnElInput){
         this.setState({
             filtro: eventoEnElInput.target.value
-        }, () => this.props.filtrar(this.state.filtro))
+        }, () => console.log(this.state.filtro))
 
 
         return true
@@ -29,7 +30,7 @@ class Filtro extends Component {
             <form action="" method='GET' onSubmit={(e) => this.controlarEnvio(e)}>
                 <label htmlFor="">Texto a filtrar: </label>
                 <input type="text" name='filtro' onChange={(e)=>this.guardarDatosDelInput(e)} value={this.state.filtro} />
-                <button type='submit'>Filtrar</button>
+                <Link to={`/ResultadoBusqueda/${this.state.filtro}`} ><button type='submit'>Filtrar</button></Link>
             </form>
         );
     }
