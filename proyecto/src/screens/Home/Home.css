@@ -105,8 +105,7 @@ header .contenedor{
 
 }
 .item-1{
-    display: flex; justify-content: space-between;
-    flex-direction: column; 
+    display: flex; justify-content: space-between; 
 }
 
 .margen{
