@@ -39,6 +39,7 @@ class DetallePeli extends Component {
                 <li className="tit"> Duracion:</li>{this.state.detalle.runtime} minutos
                 <li className="tit">Fecha de Estreno:</li>{this.state.detalle.release_date}
                 <ul className="tit">Genero: {this.state.detalle.genre} 
+                
 
                 </ul>
          </article>

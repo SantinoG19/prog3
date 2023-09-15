@@ -10,7 +10,7 @@ function Navbar() {
             
             <h1><a href="./index.html"  className="logo">FLIXER </a></h1>
             <div id='search-box'>
-                <form action='./search-result.html' id='search-form' method='get' target='_top'>
+                <form action='./ResultadoBusqueda' id='search-form' method='get' target='_top'>
                 <input id='search-text' name='search' placeholder='Busca en Flixer' type='text'/>
                 <button id='search-button' type='submit'> Busca</button>
                 
