@@ -1,16 +1,20 @@
 import React from "react";
+import "../NoEncontrada/NoEncontrada.css"
 
 function NoEncontrada() {
     return(
         <React.Fragment>
            <div>
 
-                <h1>
+                <h1 className="error">
                     Error 404 Not Found
-                </h1>
+                    
+                    <a class="volver" href="/">VOLVER A HOME</a>
 
+                 </h1>
+                
 
-                <a class="" href="/">Haz click aquí para volver a home</a>
+                
 
                 </div>
 

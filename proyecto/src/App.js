@@ -29,8 +29,7 @@ function App() {
         <Route path="/DetallePeli/id/:id" exact={true} component={DetallePeli}/>
         <Route path="/DetalleSerie/id/:id" exact={true} component={DetalleSerie}/>
         <Route path="/Buscador" component={Loader}/>
-        <Route path="" component={Navbar}/>
-        <Route path="" component={Footer}/>
+       
         <Route path="" component={NoEncontrada} />
       </Switch>
      <Footer/>

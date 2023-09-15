@@ -1,0 +1,10 @@
+.error{
+    min-height: 100vh;
+    max-width: 100vh;
+    color: white;
+    
+}
+
+.volver{
+    color: blue;
+}
