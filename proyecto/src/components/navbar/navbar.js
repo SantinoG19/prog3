@@ -8,7 +8,7 @@ function Navbar() {
             <header className="header">
         <div className="contenedor">
             
-            <h1><a href="./index.html"  className="logo">FLIXER </a></h1>
+        <Link to='/' className= "logo"> FLIXER  </Link>
             <div id='search-box'>
                 <form action='./ResultadoBusqueda' id='search-form' method='get' target='_top'>
                 <input id='search-text' name='search' placeholder='Busca en Flixer' type='text'/>

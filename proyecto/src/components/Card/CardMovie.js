@@ -8,6 +8,7 @@ class Card extends Component {
         super(props);
         this.state = {
             favTexto:" Agregar a favoritos",
+            VerMasDescrip: "Ver Mas"
         }
         
     }; 
@@ -58,7 +59,20 @@ class Card extends Component {
         
     }
 
-
+    botonVerMas(){
+        if(this.state.descrip === false){
+            this.setState({
+                descrip:true,
+                VerMasDescrip:"Ocultar"
+            })
+        }
+        else{
+            this.setState({
+                descrip:false,
+                VerMasDescrip:"Descripcion"
+            })
+        }
+    }
 
     render(){
       
@@ -73,6 +87,13 @@ class Card extends Component {
                 <h3 className='margen'>{this.props.contentPeli.title}  </h3>
               
                 <button className='boton' onClick={()=> this.modificarFav(this.props.contentPeli.id)} type='button'>{this.state.favTexto}</button>
+                {this.state.descrip ?
+                  <div>
+                    <p className="descripVerMas">{this.props.contentPeli.overview}</p>
+                  </div>
+              : false}
+
+                <button onClick={() => this.botonVerMas()} className="boton" >{this.state.VerMasDescrip}</button>
 
                 
 

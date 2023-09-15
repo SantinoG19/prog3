@@ -2,7 +2,8 @@ body{
     background-color:black
 }
 .logo{
-    color: white; font-family: 'Bebas Neue', cursive;
+       color: white;
+    font-family: 'Bebas Neue', cursive;
     font-weight: normal;
     font-size: 40px;
     text-decoration: none;
@@ -67,6 +68,27 @@ header .contenedor{
     margin-left: 10px;
 }
 
+.vertodo{
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 35px;
+    font-style: italic;
+    margin-left: 490px;
+    position: absolute; /* No se mueve */
+    top: 125px;
+    text-decoration: none;
+}
+
+.vertodoSerie{
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 35px;
+    font-style: italic;
+    margin-left: 430px;
+    position: absolute; /* No se mueve */
+    top: 1145px;
+    text-decoration: none;
+}
 .a{
     margin: 20px;
     border: solid 5px white;
@@ -166,5 +188,32 @@ display: inline-block;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
+  width: 200px;
+  margin-left: 35px;
 }
 
+.descripVerMas{
+    position: absolute; /* No se mueve */
+    width: 200px;
+    height: 300px;
+    margin-left: 35px;
+    color: #DADADA;
+    background-color: black;
+    border: 5px solid white;
+    top: 220px;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.descripVerMasTv{
+    position: absolute; /* No se mueve */
+    width: 200px;
+    height: 300px;
+    margin-left: 35px;
+    color: #DADADA;
+    background-color: black;
+    border: 5px solid white;
+    top: 1230px;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

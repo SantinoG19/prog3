@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -7,9 +8,9 @@ function Footer() {
         <article>
           <h1>Lucio Ghidini - Justo Gottlieb - Santino Galli</h1>
           <h1>© 2023 - 2023 www.Flixer.com - All Rights Reserved.</h1>
-          <a href="./index.html">
-            <h1 className="logo">Flixer</h1>
-          </a>
+          
+          <Link to='/' className= "logo"> FLIXER  </Link>
+          
         </article>
       </footer>
     </React.Fragment>

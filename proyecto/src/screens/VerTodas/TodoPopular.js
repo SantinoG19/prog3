@@ -13,7 +13,7 @@ class TodoPopular extends Component {
 
 componentDidMount() {
     let endpoint = this.props.match.params.category;
-    fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=1`)
+    fetch(`https://api.themoviedb.org/3/tv/popular?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=1`)
     .then((response) => response.json())
     .then((data) =>{
         this.setState({
@@ -26,7 +26,7 @@ componentDidMount() {
 mostrarMasSeries() {
     let paginasNumero = this.state.paginas;
 
-    fetch(`https://api.themoviedb.org/3/tv/top_rated?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=${paginasNumero}`)
+    fetch(`https://api.themoviedb.org/3/tv/popular?api_key=ba0b591fbb4dcbf21e7a279fceca5d5e&language=en-US&page=${paginasNumero}`)
       .then((res) => res.json())
       .then((data) =>
         this.setState({
