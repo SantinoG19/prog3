@@ -3,7 +3,7 @@ import Home from './screens/Home/Home';
 import DetallePeli from './screens/DetallePeli/DetallePeli';
 import DetalleSerie from './screens/DetalleSerie/DetalleSerie';
 import {Route,Switch} from 'react-router-dom'
-import Loader from './screens/Loader/Loader';
+import Loader from './components/Loader/Loader';
 import Navbar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
 import Favoritos from './screens/Favoritos/Favoritos';

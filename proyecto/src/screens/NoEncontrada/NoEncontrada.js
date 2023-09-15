@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "../../components/Loader/Loader";
 import "../NoEncontrada/NoEncontrada.css"
 
 function NoEncontrada() {

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './VerTodas.css'
+import Loader from "../../components/Loader/Loader";
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
 
 class TodoTopRated extends Component {
@@ -49,7 +50,7 @@ mostrarMasPeliculas() {
             <CardsContainer verMasPelis={this.state.top_rated} /> 
             </main>
         :
-        <h3>Cargando ...</h3>}
+         <Loader/>}
        
         
       </React.Fragment>

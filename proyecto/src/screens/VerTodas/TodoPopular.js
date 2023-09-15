@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './VerTodas.css'
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
+import Loader from "../../components/Loader/Loader";
 
 class TodoPopular extends Component {
     constructor(props) {
@@ -49,7 +50,7 @@ mostrarMasSeries() {
             <CardsContainer verMasSeries={this.state.popular} /> 
             </main>
         :
-        <h3>Cargando ...</h3>}
+        <Loader/> }
        
         
       </React.Fragment>
