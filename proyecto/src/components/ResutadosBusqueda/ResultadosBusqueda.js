@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import "./ResultadosBusqueda.css"
 
 class Buscador extends Component{
 
@@ -23,10 +24,10 @@ class Buscador extends Component{
 
     render(){
         return(
-              <div className="">
-              <form className=""  method="GET" onSubmit={(evento) => this.prevenirEnvio(evento)}>
-                  <input className="" type="text" name="Search" placeholder="Ingrese lo que desea buscar" onChange={(evento)=>this.guardarDatosDelInput(evento)} value={this.state.texto}/> 
-                  <Link to ={`/ResultadoBusqueda/${this.state.texto}`}> <button className="" type="submit">Search</button> </Link>
+              <div className="search-box">
+              <form className="search-form"  method="GET" onSubmit={(evento) => this.prevenirEnvio(evento)}>
+                  <input className="search-text" type="text" name="search" placeholder="Busca en Flixer" onChange={(evento)=>this.guardarInput(evento)} value={this.state.texto}/> 
+                  <Link to ={`/ResultadoBusqueda/${this.state.texto}`}> <button className="search-button" type="submit">Search</button> </Link>
               </form>
           </div>
         )

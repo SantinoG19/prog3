@@ -11,7 +11,9 @@ import NoEncontrada from './screens/NoEncontrada/NoEncontrada';
 // import Busqueda from "./screens/Busqueda/Busqueda"
 import TodoTopRated from './screens/VerTodas/TodoTopRated';
 import TodoPopular from './screens/VerTodas/TodoPopular';
+import PaginaBusqueda from './screens/Busqueda/pagina';
 import Buscador from './components/ResutadosBusqueda/ResultadosBusqueda';
+
 
 
 
@@ -26,7 +28,7 @@ function App() {
         <Route path="/favoritos" component={Favoritos}/>
         <Route path="/top_rated" component={TodoTopRated}/>
         <Route path="/popular" component={TodoPopular}/>
-        <Route path="/ResultadoBusqueda/:input" component={Buscador} />
+        <Route path="/ResultadoBusqueda/:query" component={PaginaBusqueda} />
         <Route path="/DetallePeli/id/:id" exact={true} component={DetallePeli}/>
         <Route path="/DetalleSerie/id/:id" exact={true} component={DetalleSerie}/>
         <Route path="/Buscador" component={Loader}/>

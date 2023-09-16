@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Home.css"
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
 import Filtro from "../../components/Filtro/Filtro";
+import Buscador from "../../components/ResutadosBusqueda/ResultadosBusqueda";
 import Loader from "../../components/Loader/Loader";
 import { Link } from "react-router-dom";
 
@@ -56,7 +57,7 @@ class Home extends Component {
     return(
 
         <main>
-    
+      
           
           
                <Link to={`/top_rated`} className="maintitulos"><u>LAS PELICULAS MAS POPULARES -- VER TODO</u></Link>
