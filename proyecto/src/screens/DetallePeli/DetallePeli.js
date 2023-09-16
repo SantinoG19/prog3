@@ -38,10 +38,8 @@ class DetallePeli extends Component {
                 <li className="tit">Rating:</li>{this.state.detalle.vote_average}
                 <li className="tit"> Duracion:</li>{this.state.detalle.runtime} minutos
                 <li className="tit">Fecha de Estreno:</li>{this.state.detalle.release_date}
-                <ul className="tit">Genero: {this.state.detalle.genre} 
+                <li className="tit">Genero: {this.state.detalle.genre} </li>
                 
-
-                </ul>
          </article>
          </div>
          <button className='btnfav'></button>
