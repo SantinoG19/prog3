@@ -59,11 +59,11 @@ class Home extends Component {
     
           
           
-          <Filtro/>     <Link to={`/top_rated`} className="maintitulos"><u>LAS PELICULAS MAS POPULARES -- VER TODO</u></Link>
+               <Link to={`/top_rated`} className="maintitulos"><u>LAS PELICULAS MAS POPULARES -- VER TODO</u></Link>
         {this.state.top_rated.length > 0 ? <CardsContainer infoPeli={this.state.top_rated}/> : <Loader/>  }
 
         
-        <Filtro/> <Link to={`/popular`}><p className="maintitulos"> <u>LAS SERIES MAS POPULARES -- VER TODO</u></p></Link>
+         <Link to={`/popular`}><p className="maintitulos"> <u>LAS SERIES MAS POPULARES -- VER TODO</u></p></Link>
         {this.state.top_rated.length > 0 ? <CardsContainer informacionSerie={this.state.popular}/> : <Loader/>  }
         
     

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './VerTodas.css'
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
 import Loader from "../../components/Loader/Loader";
+import Filtro from "../../components/Filtro/Filtro";
 
 class TodoPopular extends Component {
     constructor(props) {
@@ -37,20 +38,33 @@ mostrarMasSeries() {
       )
       .catch((error) => console.log("El error es: " + error));
   }
+  filtrarPelis(texto){
+    let arrayfil =this.state.popular.filter((populars)=>{
+      return populars.name.toLowerCase().includes(texto.toLowerCase());
+      
+    });
+    this.setState({
+      popular:arrayfil
+    })
+  }
+  
   
 
   render() {
     console.log(this.state.popular);
     return(
       <React.Fragment>
-       <h1 class="maintitulos">VER TODAS LAS SERIES POPUARES:</h1>
-        {this.state.popular.length > 0 ?
+       <h1 class="maintitulos">VER TODAS LAS SERIES POPULARES:</h1>
+
+        
             <main>
             <button onClick={() => this.mostrarMasSeries()}> Mas Series </button>
-            <CardsContainer verMasSeries={this.state.popular} /> 
+             <Filtro filtracion={(texto)=>this.filtrarPelis(texto)}/>
+            
+            <CardsContainer infoPeli={this.state.popular} /> 
             </main>
-        :
-        <Loader/> }
+        
+         
        
         
       </React.Fragment>
@@ -58,4 +72,4 @@ mostrarMasSeries() {
   }
 }
 
-export default TodoPopular;
+export default TodoPopular

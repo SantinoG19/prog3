@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './VerTodas.css'
 import Loader from "../../components/Loader/Loader";
 import CardsContainer from "../../components/CardConteiner/CardComteiner"
+import Filtro from "../../components/Filtro/Filtro";
 
 class TodoTopRated extends Component {
     constructor(props) {
@@ -37,6 +38,18 @@ mostrarMasPeliculas() {
       )
       .catch((error) => console.log("El error es: " + error));
   }
+ 
+  
+  filtrarPelis(texto){
+    console.log(this.state.top_rated);
+    let arrayfil =this.state.top_rated.filter((populars)=>{
+      return populars.title.toLowerCase().includes(texto.toLowerCase());
+      
+    });
+    this.setState({
+      top_rated:arrayfil
+    })
+  }
   
 
   render() {
@@ -44,6 +57,7 @@ mostrarMasPeliculas() {
     return(
       <React.Fragment>
        <h1 class="maintitulos">VER TODAS LAS PELICULAS TOP RATED:</h1>
+       <Filtro filtracion={(texto)=>this.filtrarPelis(texto)}/>
         {this.state.top_rated.length > 0 ?
             <main>
             <button onClick={() => this.mostrarMasPeliculas()}> Mas Peliculas </button>

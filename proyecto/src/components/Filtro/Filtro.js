@@ -1,36 +1,42 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import TodoPopular from "../../screens/VerTodas/TodoPopular";
 
 class Filtro extends Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
             filtro:""
         }
     }
-
-    controlarEnvio(evento){
+    detenerDefault(evento) {
         evento.preventDefault();
-        console.log('Sin envio');
-        return true
-    }
+      }
+    
+      guardarInput(evento) {
+        this.setState(
+          {
+            filtro: evento.target.value,
+          },
+          () => this.props.filtracion(this.state.filtro)
+        );
+      }
 
-    guardarDatosDelInput(eventoEnElInput){
-        this.setState({
-            filtro: eventoEnElInput.target.value
-        }, () => console.log(this.state.filtro))
-
-
-        return true
-    }
-
+    
+      
+        
+    
+      
     render(){
+        console.log(this.props.filtracion)
+        console.log(this.state.filtro)
         return(
-            <form action="" method='GET' onSubmit={(e) => this.controlarEnvio(e)}>
+            
+            <form action="" method='GET' onSubmit={(evento) => this.detenerDefault(evento)}>
                 <label htmlFor="">Texto a filtrar: </label>
-                <input type="text" name='filtro' onChange={(e)=>this.guardarDatosDelInput(e)} value={this.state.filtro} />
-                <Link to={`/ResultadoBusqueda/${this.state.filtro}`} ><button type='submit'>Filtrar</button></Link>
+                <input type="text" name='filtro' onChange={(evento)=>this.guardarInput(evento)} value={this.state.filtro} />
+                <button type='submit'>Filtrar</button>
             </form>
         );
     }
