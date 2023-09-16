@@ -61,7 +61,7 @@ mostrarMasSeries() {
             <button onClick={() => this.mostrarMasSeries()}> Mas Series </button>
              <Filtro filtracion={(texto)=>this.filtrarPelis(texto)}/>
             
-            <CardsContainer infoPeli={this.state.popular} /> 
+            <CardsContainer verMasSeries={this.state.popular} /> 
             </main>
         
          
