@@ -17,6 +17,8 @@ function Navbar() {
             <nav>
                 <Link to='/'> HOME  </Link>
         //      <Link to='/favoritos'> FAVORITOS </Link>
+                <Link to='/top_rated'> TOP RATED  </Link>
+        //      <Link to='/popular'> POPULAR </Link>
         //      
             </nav>
         </div>
