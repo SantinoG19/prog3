@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./DetallePeli.css"
+import Loader from "../../components/Loader/Loader";
 
 
 class DetallePeli extends Component {
@@ -43,6 +44,7 @@ class DetallePeli extends Component {
          </article>
          </div>
          <button className='btnfav'></button>
+         
        
       </React.Fragment>
     );

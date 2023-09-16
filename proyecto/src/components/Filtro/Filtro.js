@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import TodoPopular from "../../screens/VerTodas/TodoPopular";
+import "./Filtro.css"
+
 
 class Filtro extends Component {
 
@@ -34,7 +36,7 @@ class Filtro extends Component {
         return(
             
             <form action="" method='GET' onSubmit={(evento) => this.detenerDefault(evento)}>
-                <label htmlFor="">Texto a filtrar: </label>
+                <label className="texto" >Texto a filtrar: </label>
                 <input type="text" name='filtro' onChange={(evento)=>this.guardarInput(evento)} value={this.state.filtro} />
                 <button type='submit'>Filtrar</button>
             </form>

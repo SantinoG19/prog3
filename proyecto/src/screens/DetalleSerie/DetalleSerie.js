@@ -46,6 +46,7 @@ class DetalleSerie extends Component {
          <button className='btnfav'></button>
        
       </React.Fragment>
+      
     );
   }
   
